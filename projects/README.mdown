@@ -1,0 +1,12 @@
+Project Standards and Best Practices
+====================================
+
+Folder Structure
+----------------
+
+Naming Conventions
+------------------
+
+Browser Support
+---------------
+

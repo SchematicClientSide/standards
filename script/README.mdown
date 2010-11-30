@@ -1,0 +1,33 @@
+Scripting Standards and Best Practices
+======================================
+
+Formatting
+----------
+
+General Language Usage
+----------------------
+
+Commenting
+----------
+
+Namespacing
+-----------
+
+Inclusion in Page
+-----------------
+
+Dependency Management
+---------------------
+
+Libraries, Plugins, and Frameworks
+----------------------------------
+
+Tools and Utilities
+-------------------
+
+Minification/Compression
+------------------------
+
+Patterns
+--------
+

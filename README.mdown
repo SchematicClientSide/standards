@@ -1,3 +1,20 @@
 Schematic Client Side Standards and Best Practices
 ==================================================
 
+This repository stores documentation and examples for Schematic's Client Side
+standards and best practices. These are basic guidelines and may be superseded
+by a client's own standards.
+
+How to Use
+----------
+
+The repository is split into several sections, indicated by directories. In
+each directory is a README markdown file documenting the best practices for
+that section. A section may also include example source files.
+
+How to Contribute
+-----------------
+
+1. Use the wiki to start a discussion on a topic.
+2. Once a standard or best practice has been ratified by the group, check out
+the repository and make the appropriate changes/additions.

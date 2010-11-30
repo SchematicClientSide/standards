@@ -1,0 +1,19 @@
+Style Standards and Best Practices
+==================================
+
+Commenting
+----------
+
+Formatting
+----------
+
+Resets and Frameworks
+---------------------
+
+Tools and Utilities
+-------------------
+
+Hacks and Conditionals
+----------------------
+
+

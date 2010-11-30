@@ -1,0 +1,30 @@
+Markup Standards and Best Practices
+===================================
+
+Commenting
+----------
+
+Doctypes
+--------
+
+Non-visual Elements
+-------------------
+
+### Head
+
+### Charset
+
+### Meta tags
+
+### X-UA-Compatible
+
+HTML5
+-----
+
+Semantics
+---------
+
+### Tables
+
+### Forms
+
