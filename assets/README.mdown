@@ -1,0 +1,14 @@
+Asset Standards and Best Practices
+==================================
+
+Image Formats
+-------------
+
+Image Compression
+-----------------
+
+Tools
+-----
+
+Flash
+-----
