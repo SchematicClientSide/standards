@@ -4,6 +4,41 @@ Style Standards and Best Practices
 Commenting
 ----------
 
+Each CSS file should begin with a brief description of its purpose in the format shown below. The description should be followed by a Table of Contents that lists the major sections of the file.
+
+   /* ------------------------ */
+   /* ---- GLOBAL STYLING ---- */
+   /* ------------------------ */
+ 
+   /* TOC
+      1. Masthead
+      2. Footer
+   */
+
+Major sections within a file should be commented in the following format. Two lines should separate the end of one section and the comment header for the next.
+
+   /* 1. MASTHEAD
+   ------------------------------------------------ */
+   #masthead {
+      width: 960px;
+   } 
+ 
+   #nav {
+      width: 700px;
+      margin-top: 20px;
+   } 
+ 
+ 
+   /* 2. FOOTER
+   ------------------------------------------------ */
+   #footer {
+      background: #ccc;
+   }
+
+A sub-section of a major section should be commented in the following format.
+
+   /* ::::: Section Name ::::: */
+
 Formatting
 ----------
 
