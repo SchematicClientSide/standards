@@ -1,8 +1,6 @@
-Style Standards and Best Practices
-==================================
+#Style Standards and Best Practices
 
-Commenting
-----------
+##Commenting
 
 Each CSS file should begin with a brief description of its purpose in the format shown below. The description should be followed by a Table of Contents that lists the major sections of the file.
 
@@ -37,17 +35,115 @@ Major sections within a file should be commented in the following format. Two li
 
 A sub-section of a major section should be commented in the following format.
 
-/* ::::: Section Name ::::: */
+	/* ::::: Section Name ::::: */
 
-Formatting
-----------
+##Formatting
 
-Resets and Frameworks
----------------------
+Class and ID names should not include presentational descriptors.
 
-Tools and Utilities
--------------------
+Examples of good names:
+	#content
+	#news
+	.icon
 
-Hacks and Conditionals
-----------------------
+Examples of bad names:
+	#wideArea
+	#newsBlackText
+	.smallIcon
 
+In each of the bad examples, a portion of the name describes how that element will look. If the CSS is changed (making #wideArea narrow, for example), then the name becomes meaningless.
+
+### Rule Format
+Each rule should be formatted as shown below with a space before the opening curly brace, each property and value pair on its own line, one hard tab to indent each property and value pair, a space after the colon, a semi-colon after all declarations, and the closing curly brace flush-left. Rules should be separated by an empty line (rather than butting up against each other).
+
+	#content {
+		background-color: #eee;
+		border: 2px solid #9c0000;
+		width: 600px;
+	}
+	
+	#footer {
+		background: #666;
+		color: #fff;
+		padding: 15px 20px;
+	}
+
+### Indentation
+Code indentation should be done with a single, hard tab.
+
+### Miscellaneous
+* HTML element names should be in all lowercase. For example:
+
+	ul {
+		border: 1px solid #ccc;
+	}
+	
+	/* Instead of */
+	
+	UL {
+		border: 1px solid #ccc;
+	}
+
+* Use hex color values instead of color names, i.e. #fff instead of white.
+* Hex values should be expressed in all lowercase as shown in the example above.
+* Use shorthand notation whenever possible, for example:
+
+	ul {
+		margin: 0 10px;
+	}
+	
+	/* Instead of */
+	
+	UL {
+		margin: 0 10px 0 10px;
+	}
+
+##Resets and Frameworks
+
+Eric Meyer's CSS Reset should be placed at the beginning of a project's global style sheet. Be sure to use the latest version posted at [http://meyerweb.com/eric/tools/css/reset/][http://meyerweb.com/eric/tools/css/reset/]. A developer can use his/her discretion to truncate the reset if the project doesn't require all of the rules. For instance, if you are certain the project won't ever have applet or table elements, those rules could be removed.
+
+##Tools and Utilities
+
+##Hacks and Conditionals
+
+###Internet Explorer Style Sheet
+
+Due to browser differences, it is sometimes necessary to provide different CSS to IE. The most future-proof way to do this is to have an IE-only CSS file or files, as is appropriate.
+
+Developers should use the /* @see ie.css */ notation in the non-IE CSS file to note each instance where a companion declaration exists in ie.css.
+
+Example:
+
+	#content {
+		float: right;
+		padding-top: 5px;
+		width: 450px; /* @see ie.css */
+	}
+
+###CSS Hacks
+A CSS hack should be avoided when a standard solution exists. However, occasionally one is necessary in order to make a page element display consistently on a variety of browsers.
+Please use the appropriate hack from the list below. Note that the IE hacks should be placed in the IE-only CSS file mentioned above.
+
+###Hide rule from Internet Explorer 5.x
+Backslash Hack, also known as the Simplified Box Model Hack (SBMH)
+Example:
+	#example {
+		padding-left: 5px;
+		width: 623px;
+		w\idth: 618px; /* IE 5.x does not see this */
+	}
+Note: The backslash should not appear before either the first letter of the word or a hexadecimal letter (A through F).
+
+###Define rule only for Internet Explorer 5-6
+Star HTML Hack
+Example:
+	* html #example {
+		border: 1px solid #ccc;
+	}
+
+###Hide rule from Internet Explorer 5-6
+Example:
+	html>body #example {
+		border: 2px solid #333;
+	}
+Note: This behaves the opposite of the Star HTML Hack. Given the option of using one or the other, it is preferable to use the Star HTML Hack in conjunction with defining a standard rule for non-IE browsers as you normally would.
